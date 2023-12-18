@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 
 export const makeAuthzManager = () => {
   const internals = {};
+
   internals.guessLimit = 2;
   internals.secrets = [];
 

