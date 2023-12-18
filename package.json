@@ -1,0 +1,11 @@
+{
+    "main": "authz.js",
+    "scripts": {
+        "test": "node .testrunner.js",
+        "start": "node .assert.js"
+    },
+    "type": "module",
+    "dependencies": {
+        "node-fetch": "^3.3.2"
+    }
+}
