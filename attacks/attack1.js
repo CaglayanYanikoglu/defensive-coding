@@ -10,5 +10,7 @@
 // Add setter to Authorization Header
 // Target: authzManager.authorizedFetch
 
+const url = 'https://github.com/CaglayanYanikoglu/defensive-coding';
+
 export const attack = authzManager => {
 };
