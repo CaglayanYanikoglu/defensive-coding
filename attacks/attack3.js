@@ -2,8 +2,6 @@ let stolen;
 
 // Action: Remove the functionality of accepting null prototype
 
-// Object.create(null) ?? :/
-
 // const { create } = Object;
 // Object.create = (proto, props) => {
 //   return create(proto, props);
