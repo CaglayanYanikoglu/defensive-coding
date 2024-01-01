@@ -13,4 +13,16 @@
 const url = 'https://github.com/CaglayanYanikoglu/defensive-coding';
 
 export const attack = authzManager => {
+  authzManager.authorizedFetch([
+    {
+      url: 'https://github.com/CaglayanYanikoglu/defensive-coding',
+      method: 'GET',
+      headers: {
+        set Authorization(key) {
+          console.log('### RESPONSE ###');
+          console.log(key);
+        }
+      }
+    }
+  ])
 };

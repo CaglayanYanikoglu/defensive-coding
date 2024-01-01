@@ -48,15 +48,6 @@ export const makeAuthzManager = () => {
         return acc;
       }, {});
 
-      /* {
-        'www.google.com': {
-          headers: {
-            Authorization: 'Bearer ANY_SECRET'
-          },
-          method: 'GET'
-        }
-      } */
-      
       return Promise.all(Object.keys(authorizedRequests).map(url => fetch(url, authorizedRequests[url])));
     },
   };
